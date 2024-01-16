@@ -1,13 +1,6 @@
-// Получаем от пользователя количество часов через промпт
-var hours = parseFloat(prompt("Введите количество часов:"));
+'use strict';
 
-// Проверяем, является ли введенное значение числом
-if (isNaN(hours)) {
-    alert("Пожалуйста, введите корректное число.");
-} else {
-    // Вычисляем количество секунд в введенном количестве часов
-    var seconds = hours * 3600;
+const askHours = +prompt('Please indicate the number of hours:');
+const secPerHour = askHours * 3600;
 
-    // Выводим результат в переменной через alert
-    alert("В " + hours + " часах " + seconds + " секунд.");
-}
+alert(`There are ${secPerHour} seconds in ${askHours} hours`);
